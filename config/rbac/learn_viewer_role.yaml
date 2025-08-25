@@ -1,0 +1,29 @@
+# This rule is not used by the project dream-operator itself.
+# It is provided to allow the cluster admin to help manage permissions for users.
+#
+# Grants read-only access to devops.devopsengineer.ing resources.
+# This role is intended for users who need visibility into these resources
+# without permissions to modify them. It is ideal for monitoring purposes and limited-access viewing.
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: dream-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: learn-viewer-role
+rules:
+- apiGroups:
+  - devops.devopsengineer.ing
+  resources:
+  - learns
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - devops.devopsengineer.ing
+  resources:
+  - learns/status
+  verbs:
+  - get

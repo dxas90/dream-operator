@@ -1,0 +1,16 @@
+apiVersion: devops.devopsengineer.ing/v1alpha1
+kind: Learn
+metadata:
+  labels:
+    app.kubernetes.io/name: dream-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: learn-sample
+spec:
+  displayName: Sample Service Display
+  description: This is a sample service display configuration.
+  serviceConfig:
+    param1: value1
+    param2: value2
+    enabledOptions:
+      - option1
+      - option2
