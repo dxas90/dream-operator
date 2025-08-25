@@ -44,7 +44,7 @@ type LearnSpec struct {
 	// The following markers will use OpenAPI v3 schema to validate the value
 	// More info: https://book.kubebuilder.io/reference/markers/crd-validation.html
 	// +kubebuilder:validation:MinLength=2
-	// +kubebuilder:validation:MaxLength=9
+	// +kubebuilder:validation:MaxLength=32
 
 	// DisplayName is the display name for the Learn instance
 	// +operator-sdk:csv:customresourcedefinitions:type=spec

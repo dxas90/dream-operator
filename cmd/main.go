@@ -247,7 +247,6 @@ func main() {
 		setupLog.Info("shutting down manager")
 		os.Exit(0)
 	}()
-	<-exitCh
 
 	setupLog.Info("starting manager")
 	if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {
