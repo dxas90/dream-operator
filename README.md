@@ -1,5 +1,11 @@
 # dream-operator
 // TODO(user): Add simple overview of use/purpose
+operator-sdk init --domain devopsengineer.ing --repo github.com/dxas90/dream-operator
+operator-sdk create api --group devops --version v1alpha1 --kind Learn --resource --controller
+make docker-build IMG="dxas90/dream-operator:v0.0.1"
+
+go clean -modcache -cache -testcache
+
 
 ## Description
 // TODO(user): An in-depth paragraph about your project and overview of use
@@ -132,4 +138,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
